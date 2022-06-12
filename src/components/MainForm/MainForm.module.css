@@ -1,0 +1,44 @@
+.main {
+    padding: 20px 32px;
+    width: 100%;
+    background-color: rgb(251, 251, 251);
+    border-radius: 12px;
+}
+
+.form {
+    margin-top: 12px;
+
+}
+
+.moneyBox {
+    background: #eee;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.23;
+    padding: 5px 8px 4px 5px;
+    text-align: right;
+    min-width: 100px;
+}
+
+.sliderMarks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -15px;
+}
+
+.sliderText {
+    font-size: 12px;
+}
+
+.free {
+    font-size: 24px;
+    color: #f70;
+    font-weight: 600;
+}
+
+.btn {
+    margin-top: 12px;
+    background-color: #52af77;
+}

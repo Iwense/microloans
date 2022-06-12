@@ -1,0 +1,1 @@
+export { SliderMain as default } from './Slider'
