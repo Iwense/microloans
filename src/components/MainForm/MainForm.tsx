@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import Box from "@mui/material/Box";
-import { Button, ButtonProps, Slider, Stack, Typography } from "@mui/material";
+import { Slider, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { DB } from "../../db/db";
 import styles from "./MainForm.module.css";
-import { User } from "../../db/user";
+import { UserContext } from "../..";
+import MainButton from "../MainButton";
 
 function currencyFormat(num: number) {
   return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1 ") + " ₽";
@@ -30,26 +31,19 @@ const MoneySlider = styled(Slider)({
   },
 });
 
-const ColorButton = styled(Button)<ButtonProps>(() => ({
-  color: "#FFF",
-  backgroundColor: "#52af77",
-  "&:hover": {
-    backgroundColor: "#52af77",
-  },
-}));
-
 interface IMainForm {
   onClick?: () => void;
 }
 
 export const MainForm: React.FC<IMainForm> = ({ onClick }) => {
+  const User = useContext(UserContext);
   const [moneyValue, setMoneyValue] = React.useState<
     number | string | Array<number | string>
-  >(15000);
+  >(User.amount || 15000);
 
   const [dayValue, setDayValue] = React.useState<
     number | string | Array<number | string>
-  >(7);
+  >(User.days || 7);
 
   const money = typeof moneyValue === "number" ? moneyValue : 0;
   const days = typeof dayValue === "number" ? dayValue : 0;
@@ -140,14 +134,14 @@ export const MainForm: React.FC<IMainForm> = ({ onClick }) => {
             </Typography>
           </Box>
         </Box>
-        <ColorButton
+        <MainButton
           variant="contained"
           fullWidth
           sx={{ backgroundColor: "#52af77", marginTop: "16px" }}
           onClick={handleClick}
         >
           Далее
-        </ColorButton>
+        </MainButton>
       </Box>
     </Box>
   );

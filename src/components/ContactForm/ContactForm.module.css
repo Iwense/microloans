@@ -37,3 +37,8 @@
     color: #f70;
     font-weight: 600;
 }
+
+.btn {
+    margin-top: 12px;
+    background-color: #52af77;
+}

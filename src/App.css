@@ -5,3 +5,11 @@
     background: linear-gradient(90deg, rgba(113,249,155,1) 0%, rgba(1,179,56,1) 100%);
     height: 100vh;
 }
+
+.block {
+    padding: 20px 32px;
+    width: 100%;
+    background-color: rgb(251, 251, 251);
+    border-radius: 12px;
+    text-align: center;
+}
