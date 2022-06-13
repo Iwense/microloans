@@ -1,0 +1,14 @@
+.main {
+  padding: 20px 32px;
+  width: 100%;
+  background-color: rgb(251, 251, 251);
+  border-radius: 12px;
+}
+
+.radioWrapper {
+  margin: 12px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+
+}

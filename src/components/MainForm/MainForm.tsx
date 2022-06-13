@@ -4,6 +4,7 @@ import { Button, ButtonProps, Slider, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { DB } from "../../db/db";
 import styles from "./MainForm.module.css";
+import { User } from "../../db/user";
 
 function currencyFormat(num: number) {
   return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1 ") + " ₽";
@@ -37,7 +38,11 @@ const ColorButton = styled(Button)<ButtonProps>(() => ({
   },
 }));
 
-export const MainForm = () => {
+interface IMainForm {
+  onClick?: () => void;
+}
+
+export const MainForm: React.FC<IMainForm> = ({ onClick }) => {
   const [moneyValue, setMoneyValue] = React.useState<
     number | string | Array<number | string>
   >(15000);
@@ -58,6 +63,11 @@ export const MainForm = () => {
     newValue: number | number[]
   ) => {
     setDayValue(newValue);
+  };
+
+  const handleClick = () => {
+    User.setMoney(money, days);
+    onClick?.();
   };
 
   return (
@@ -134,6 +144,7 @@ export const MainForm = () => {
           variant="contained"
           fullWidth
           sx={{ backgroundColor: "#52af77", marginTop: "16px" }}
+          onClick={handleClick}
         >
           Далее
         </ColorButton>
