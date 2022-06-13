@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/microloans/static/css/main.4203f19d.css",
+    "main.js": "/microloans/static/js/main.44dfaddf.js",
+    "static/media/oneclick.png": "/microloans/static/media/oneclick.5de957a5a43d1952fd24.png",
+    "static/media/lime.png": "/microloans/static/media/lime.409d171c72cbb15f08c0.png",
+    "static/media/viva.png": "/microloans/static/media/viva.1120026d01f5685cd62b.png",
+    "static/media/moneyman.png": "/microloans/static/media/moneyman.85433c2d2c77e55c7c23.png",
+    "static/media/ekapusta.png": "/microloans/static/media/ekapusta.736ef0f6487403489699.png",
+    "static/media/webbankir.png": "/microloans/static/media/webbankir.a96c94661e48c0a08699.png",
+    "static/media/turbo.png": "/microloans/static/media/turbo.e07fb9b5ded98f843e12.png",
+    "index.html": "/microloans/index.html",
+    "main.4203f19d.css.map": "/microloans/static/css/main.4203f19d.css.map",
+    "main.44dfaddf.js.map": "/microloans/static/js/main.44dfaddf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4203f19d.css",
+    "static/js/main.44dfaddf.js"
+  ]
+}
